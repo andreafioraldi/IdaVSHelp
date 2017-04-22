@@ -6,11 +6,10 @@ __email__ = "andreafioraldi@gmail.com"
 import idaapi
 import subprocess
 import os
-import idc
 
 def query():
     func = idaapi.get_highlighted_identifier()
-    args = [idc.GetIdaDirectory() + '\\plugins\\Microsoft Help Viewer\\v2.2\\HlpViewer.exe',
+    args = [os.environ["ProgramFiles"] + '\\Microsoft Help Viewer\\v2.2\\HlpViewer.exe',
         '/catalogName',
         'VisualStudio14',
         '/helpQuery',
@@ -23,7 +22,7 @@ def query():
     subprocess.Popen(args, stdout=subprocess.PIPE, stderr=subprocess.STDOUT)
 
 def open_help():
-    args = [idc.GetIdaDirectory() + '\\plugins\\Microsoft Help Viewer\\v2.2\\HlpViewer.exe',
+    args = [os.environ["ProgramFiles"] + '\\Microsoft Help Viewer\\v2.2\\HlpViewer.exe',
         '/catalogName',
         'VisualStudio14',
         '/locale',
