@@ -7,9 +7,11 @@ import idaapi
 import subprocess
 import os
 
+progdir = os.environ["ProgramFiles"]
+
 def query():
     func = idaapi.get_highlighted_identifier()
-    args = [os.environ["ProgramFiles"] + '\\Microsoft Help Viewer\\v2.2\\HlpViewer.exe',
+    args = [progdir + '\\Microsoft Help Viewer\\v2.2\\HlpViewer.exe',
         '/catalogName',
         'VisualStudio14',
         '/helpQuery',
@@ -22,7 +24,7 @@ def query():
     subprocess.Popen(args, stdout=subprocess.PIPE, stderr=subprocess.STDOUT)
 
 def open_help():
-    args = [os.environ["ProgramFiles"] + '\\Microsoft Help Viewer\\v2.2\\HlpViewer.exe',
+    args = [progdir + '\\Microsoft Help Viewer\\v2.2\\HlpViewer.exe',
         '/catalogName',
         'VisualStudio14',
         '/locale',
