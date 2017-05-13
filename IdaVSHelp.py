@@ -14,7 +14,7 @@ class IdaVSHelpPlugin(idaapi.plugin_t):
 
     help = "IdaVSHelp: Visual Studio Help for IDA Pro"
     wanted_name = "IDA Visual Studio Help"
-    wanted_hotkey = "Alt-H"
+    wanted_hotkey = "Alt-R"
 
     hlpviewer_path = ""
     catalog_name = ""

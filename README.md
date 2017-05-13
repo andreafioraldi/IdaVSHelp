@@ -2,7 +2,7 @@
 IDAPython plugin to integrate Visual Studio Help Viewer in IDA Pro >= 6.8.
 
 ### Usage
-Select a Windows API function name in IDA and then press `Alt-H` to open the Help Viewer page about the selected function.
+Select a Windows API function name in IDA and then press `Alt-R` to open the Help Viewer page about the selected function.
 
 ### Dependencies
 + IDAPython >= 2.7
